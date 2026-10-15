@@ -1,0 +1,8 @@
+{
+  "name": "AWENET",
+  "description": "Decentralized peer-to-peer network node, messenger, storage, and ONECOIN economy dashboard.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

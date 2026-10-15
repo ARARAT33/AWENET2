@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>AWENET · Universal Sovereign Client & Governor</title>
+  <meta name="description" content="AWENET Decentralized Cloud Resource Grid, Automated ONECOIN Payouts & ONEBANK Governance.">
+  <meta property="og:title" content="AWENET Universal Client & Governor">
+  <meta property="og:description" content="AWENET Decentralized Cloud Resource Grid, Automated ONECOIN Payouts & ONEBANK Governance.">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./onecoin.css">
+</head>
+<body class="theme-light">
+  <!-- Native OS Window Titlebar -->
+  <header class="window-titlebar">
+    <div class="titlebar-left">
+      <div class="titlebar-brand">
+        <i></i>
+        <span>AWENET Universal Cloud & Sovereign Client</span>
+      </div>
+      <div class="os-badge">
+        <span id="osIcon">🪟</span>
+        <select id="platformSelect" title="Select OS Environment Simulation">
+          <option value="windows" selected>Windows 11 Client</option>
+          <option value="linux">Linux Daemon</option>
+          <option value="android">Android Mobile</option>
+        </select>
+      </div>
+      <span class="pill active" id="titlebarRolePill" style="font-size:10px;padding:2px 8px;">👑 Master Controller: Ararat Avetisyan</span>
+    </div>
+    <div class="titlebar-center">
+      <div class="pill active" id="networkPill">
+        <i class="beacon-dot"></i>
+        <span id="networkPillText">Mesh Cloud Online · 4 Servers</span>
+      </div>
+    </div>
+    <div class="titlebar-right">
+      <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light / Dark Theme">
+        <span id="themeToggleIcon">☀️</span>
+        <span id="themeToggleText">Բաց Թեմա</span>
+      </button>
+      <select id="langSelect" class="lang-selector" title="Language / Լեզու">
+        <option value="hy" selected>🇦🇲 Հայերեն</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="es">🇪🇸 Español</option>
+      </select>
+      <div class="window-controls">
+        <button class="win-btn min" id="winMinBtn" title="Minimize">—</button>
+        <button class="win-btn max" id="winMaxBtn" title="Maximize">▢</button>
+        <button class="win-btn close" id="winCloseBtn" title="Close">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Application Body -->
+  <div class="app">
+    <!-- Left Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo-container">A</div>
+        <div class="brand-meta">
+          <b>AWENET</b>
+          <span id="brandSub">Sovereign Resource Cloud</span>
+        </div>
+      </div>
+
+      <div class="nav-label">GOVERNANCE & MASTER</div>
+      <button class="nav" data-view="governor">
+        <span class="nav-icon">👑</span>
+        <span data-i18n="nav_governor">AWENET Կառավարիչ</span>
+        <span class="nav-badge" style="background:#059669;color:#fff;">Master</span>
+      </button>
+
+      <div class="nav-label">CLOUD RESOURCE POOL</div>
+      <button class="nav" data-view="pool">
+        <span class="nav-icon">⚡</span>
+        <span data-i18n="nav_pool">Ռեսուրսների Ցանց (Grid)</span>
+        <span class="nav-badge" id="poolGridBadge">290 TB</span>
+      </button>
+      <button class="nav" data-view="servers">
+        <span class="nav-icon">🖥️</span>
+        <span data-i18n="nav_servers">Սերվերներ և Եկամուտ</span>
+        <span class="nav-badge" id="serversEarningsBadge">1C Payout</span>
+      </button>
+
+      <div class="nav-label">SOVEREIGN ECONOMY</div>
+      <button class="nav" data-view="onecoin">
+        <span class="nav-icon">₿</span>
+        <span data-i18n="nav_onecoin">ONECOIN / ONEBANK</span>
+        <span class="nav-badge">1% Fee</span>
+      </button>
+
+      <div class="nav-label">WEB & ECOSYSTEM</div>
+      <button class="nav active" data-view="browser">
+        <span class="nav-icon">◉</span>
+        <span data-i18n="nav_browser">AWE Բրաուզեր</span>
+      </button>
+      <button class="nav" data-view="sites">
+        <span class="nav-icon">🌐</span>
+        <span data-i18n="nav_sites">Կայքերի Կառավարում</span>
+      </button>
+      <button class="nav" data-view="store">
+        <span class="nav-icon">◈</span>
+        <span data-i18n="nav_store">AWESTORE & Creator</span>
+      </button>
+      <button class="nav" data-view="messenger">
+        <span class="nav-icon">✉</span>
+        <span data-i18n="nav_messenger">Մեսենջեր & Կանչեր</span>
+      </button>
+
+      <div class="nav-label">USER & SECURITY</div>
+      <button class="nav" data-view="mypage">
+        <span class="nav-icon">👤</span>
+        <span data-i18n="nav_mypage">MY Page & Սարքեր</span>
+      </button>
+      <button class="nav" data-view="settings">
+        <span class="nav-icon">⚙</span>
+        <span data-i18n="nav_settings">Կարգավորումներ</span>
+      </button>
+
+      <div class="sidebar-bottom">
+        <div class="connection-card">
+          <div class="connection-header">
+            <span id="sideStateText">Grid Shared & Online</span>
+            <i class="beacon-dot"></i>
+          </div>
+          <small id="sideAweId">Controller: Ararat Avetisyan</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Dynamic View Area -->
+    <main class="main">
+      <header class="topbar">
+        <div class="crumb">
+          <span>AWENET</span>
+          <b>/</b>
+          <strong id="pageTitle">AWE Բրաուզեր</strong>
+        </div>
+        <div class="top-actions">
+          <button class="btn primary" id="btnEpochTrigger" style="padding:5px 12px;font-size:11px;" title="Trigger automated network reward payout distribution">
+            <span>⚡ Trigger Epoch Payout</span>
+          </button>
+          <span id="topUserPill" class="pill" style="cursor:pointer;" title="Click to copy your Master AWEID">
+            <span id="topUserNameText">👑 Ararat Avetisyan</span>
+          </span>
+          <span id="topBalancePill" class="pill active">
+            <span id="topBalanceText">500.0 ONECOIN</span>
+          </span>
+          <button class="btn secondary" id="btnLogoutBtn" style="padding:4px 10px;font-size:11px;" title="Switch Account or Logout">
+            <span>🚪 Ելք</span>
+          </button>
+        </div>
+      </header>
+
+      <section id="view" class="view-container"></section>
+    </main>
+  </div>
+
+  <!-- Sovereign Registration & Authentication Portal Overlay -->
+  <div id="authPortal" class="auth-portal-overlay" style="display:none;">
+    <div class="auth-box">
+      <div class="auth-header">
+        <div class="logo-container">A</div>
+        <h2>AWENET Sovereign Portal</h2>
+        <p>Մուտք գործեք կամ գրանցվեք ապակենտրոնացված ցանցում</p>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tabBtnRegister">📝 Գրանցում</button>
+        <button class="auth-tab-btn" id="tabBtnLogin">🔑 Մուտք</button>
+        <button class="auth-tab-btn" id="tabBtnRestore">🔄 Վերականգնել</button>
+      </div>
+
+      <!-- Tab 1: Registration -->
+      <div id="authRegisterForm">
+        <div class="form-group">
+          <label class="form-label">Անուն / Կեղծանուն (Name / Handle)</label>
+          <input type="text" class="input" id="regDisplayName" value="Ararat Avetisyan" placeholder="Ձեր անունը">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Օգտանուն (Username)</label>
+          <input type="text" class="input" id="regUsername" value="ararat" placeholder="օր․ ararat">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Էլ․ Փոստ (կամընտիր)</label>
+          <input type="email" class="input" id="regEmail" value="araratavetisyan777999@gmail.com" placeholder="araratavetisyan777999@gmail.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Դերը Ցանցում (Role)</label>
+          <div class="auth-role-card selected" id="roleMaster" data-role="MASTER_CONTROLLER">
+            <b style="color:var(--text-contrast);">👑 Ցանցի Գլխավոր Կառավարիչ (Master Controller & ONEBANK Governor)</b>
+            <div class="muted" style="font-size:11px;margin-top:2px;">Լիարժեք հսկողություն, դրամական էմիսիա, սերվերների վավերացում</div>
+          </div>
+          <div class="auth-role-card" id="roleServer" data-role="NODE_OPERATOR">
+            <b style="color:var(--text-contrast);">🖥️ Սերվեր Տրամադրող (Node Server Provider)</b>
+            <div class="muted" style="font-size:11px;margin-top:2px;">Տրամադրեք CPU, RAM, Storage և ստացեք ավտոմատ ONECOIN վճարումներ</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Գաղտնաբառ (Master Password)</label>
+          <input type="password" class="input" id="regPassword" value="admin1234" placeholder="Մուտքագրեք գաղտնաբառ">
+        </div>
+        <div class="form-group">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <label class="form-label" style="margin-bottom:0;">12-Բառանոց Ինքնիշխան Գաղտնի Բանալի (Seed Phrase)</label>
+            <button class="btn secondary" id="btnRegenSeed" style="padding:2px 8px;font-size:10px;">Նոր Բառեր</button>
+          </div>
+          <div class="seed-box" id="regSeedBox">ocean ripple canyon falcon beacon summit anchor crystal matrix horizon pulse vector</div>
+        </div>
+        <button class="btn primary" id="btnSubmitRegister" style="width:100%;padding:10px;font-size:13px;margin-top:10px;">
+          🚀 Գրանցվել և Բացել Բրաուզերը
+        </button>
+      </div>
+
+      <!-- Tab 2: Login -->
+      <div id="authLoginForm" style="display:none;">
+        <div style="background:var(--accent-emerald-subtle);border:1px solid rgba(5,150,105,0.25);border-radius:10px;padding:12px;margin-bottom:16px;">
+          <b style="color:var(--accent-emerald);font-size:12.5px;">Արագ Մուտք որպես Գլխավոր Կառավարիչ</b>
+          <p style="margin:4px 0 10px;font-size:11.5px;color:var(--text-secondary);">Մուտք գործեք անմիջապես որպես Ararat Avetisyan</p>
+          <button class="btn primary" id="btnQuickMasterLogin" style="width:100%;padding:7px;font-size:12px;">
+            👑 1-Click Մուտք որպես Ararat Avetisyan
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Օգտանուն կամ AWE-ID</label>
+          <input type="text" class="input" id="loginUsername" placeholder="օր․ ararat">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Գաղտնաբառ</label>
+          <input type="password" class="input" id="loginPassword" placeholder="Մուտքագրեք գաղտնաբառը">
+        </div>
+        <button class="btn primary" id="btnSubmitLogin" style="width:100%;padding:10px;font-size:13px;margin-top:10px;">
+          🔓 Մուտք Գործել և Բացել Բրաուզերը
+        </button>
+      </div>
+
+      <!-- Tab 3: Restore from Seed -->
+      <div id="authRestoreForm" style="display:none;">
+        <div class="form-group">
+          <label class="form-label">12-Բառանոց Գաղտնի Բանալի (Mnemonic Seed Phrase)</label>
+          <textarea class="textarea" id="restoreSeedInput" rows="3" placeholder="Մուտքագրեք 12 բառերը բացատով..."></textarea>
+        </div>
+        <button class="btn primary" id="btnSubmitRestore" style="width:100%;padding:10px;font-size:13px;margin-top:10px;">
+          ⚡ Վերականգնել Ինքնությունը
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Modals Container -->
+  <div id="modalContainer" style="display:none;"></div>
+
+  <!-- Scripts -->
+  <script src="./vendor/qrcode.js"></script>
+  <script src="./app.js"></script>
+  <script src="./onecoin.js"></script>
+</body>
+</html>

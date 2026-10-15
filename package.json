@@ -1,0 +1,15 @@
+{
+  "name": "awenet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Decentralized peer-to-peer network node, messenger, storage, and ONECOIN economy dashboard.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node -e \"console.log('Build completed successfully')\""
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
